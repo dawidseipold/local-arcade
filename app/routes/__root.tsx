@@ -2,6 +2,7 @@
 import { Outlet, createRootRoute } from '@tanstack/react-router'
 import { Meta, Scripts } from '@tanstack/start'
 import type { ReactNode } from 'react'
+import TailwindCSS from '../styles/index.css?url'
 
 export const Route = createRootRoute({
     head: () => ({
@@ -14,9 +15,15 @@ export const Route = createRootRoute({
                 content: 'width=device-width, initial-scale=1',
             },
             {
-                title: 'TanStack Start Starter',
+                title: 'Local Arcade',
             },
         ],
+        links: [
+            {
+                rel: "stylesheet",
+                href: TailwindCSS,
+            }
+        ]
     }),
     component: RootComponent,
 })
@@ -32,14 +39,15 @@ function RootComponent() {
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     return (
         <html>
-        <head>
-            <title>Local Arcade</title>
-            <Meta />
-        </head>
-        <body>
-        {children}
-        <Scripts />
-        </body>
+            <head>
+                <title>Local Arcade</title>
+                <Meta />
+            </head>
+
+            <body>
+                {children}
+                <Scripts />
+            </body>
         </html>
     )
 }
