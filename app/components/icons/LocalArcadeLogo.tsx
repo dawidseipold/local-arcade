@@ -1,13 +1,16 @@
-import * as React from "react"
 import type {FunctionComponent} from "react";
+import * as React from "react";
 
-interface LocalArcadeLogoProps {}
+interface LocalArcadeLogoProps {
+    size?: string | number;
+}
 
-const LocalArcadeLogo: FunctionComponent<LocalArcadeLogoProps> = ({...props}) => (
+const LocalArcadeLogo: FunctionComponent<LocalArcadeLogoProps> = ({size = 24, ...props}) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        width={480}
-        height={380}
+        viewBox="0 0 480 380"
+        width={size}
+        height={size}
         fill="none"
         {...props}
     >
@@ -26,10 +29,10 @@ const LocalArcadeLogo: FunctionComponent<LocalArcadeLogoProps> = ({...props}) =>
             rx={28}
             transform="rotate(90 270 158)"
         />
-        <rect width={60} height={180} x={150} y={100} fill="#fff" rx={28} />
-        <rect width={60} height={60} x={330} y={216} fill="#fff" rx={28} />
-        <rect width={60} height={60} x={330} y={100} fill="#fff" rx={28} />
+        <rect width={60} height={180} x={150} y={100} fill="#fff" rx={28}/>
+        <rect width={60} height={60} x={330} y={216} fill="#fff" rx={28}/>
+        <rect width={60} height={60} x={330} y={100} fill="#fff" rx={28}/>
     </svg>
-)
+);
 
 export default LocalArcadeLogo;
