@@ -5,3 +5,8 @@
 @theme {
     --font-sans: "Satoshi", "Arial", "sans-serif";
 }
+
+@utility banner-mask-gradient {
+    mask-image: linear-gradient(to right, transparent 20%, white 80%);
+    -webkit-mask-image: -webkit-linear-gradient(45deg, transparent 20%, white 80%);
+}
