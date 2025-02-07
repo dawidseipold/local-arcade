@@ -18,12 +18,12 @@ const Header: FunctionComponent<HeaderProps> = () => {
 
         <ul
           className={cn(
-            "absolute left-1/2 -translate-x-1/2 flex gap-x-8 text-white",
+            "absolute left-1/2 -translate-x-1/2 flex gap-x-8 text-gray-300 font-bold",
           )}
         >
-          <li>Home</li>
-          <li>Browse</li>
-          <li>Forum</li>
+          <li className={"hover:text-gray-100 cursor-pointer"}>Home</li>
+          <li className={"hover:text-gray-100 cursor-pointer"}>Browse</li>
+          <li className={"hover:text-gray-100 cursor-pointer"}>Forum</li>
         </ul>
 
         <div className={cn("flex gap-x-4 items-center")}>
