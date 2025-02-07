@@ -13,10 +13,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "app/"
+        "app/*"
       ],
       "public/*": [
-        "public/"
+        "public/*"
       ]
     },
     // Bundler mode
